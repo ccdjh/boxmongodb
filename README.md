@@ -6,6 +6,8 @@
 boxmongodb is a lightweight ORM framework for Python and MongoDB：
 
 -------------------
+> 中文文档 [click](https://github.com/ccdjh/boxmongodb/wiki/ChineseREADME)
+
 #### install (ubuntu)
 pip install
 ``` python
@@ -54,9 +56,7 @@ install tornadoWeb
 sudo pip install tornado
 ``` 
 Documentation
-- [guide](#insert)
 - [boxmongodb guestbook](#insert)
-- [boxmongodb Blog](#insert)
 
 -------------------
 
