@@ -298,6 +298,8 @@ class ModelFilter(object):#有长度
             return value #过滤是否合格的dict格式
         if v2[0] == 'email_property':
             return value #过滤是否合格的dict格式
+        if v2[0] == 'list_property':
+            return value #过滤是否合格的dict格式
 
 #首先是外属性，然后是内属性，再是默认值，再是附加值
 class StringProperty(object):
@@ -370,6 +372,17 @@ class DictProperty(object):
         default = dict_property_arg['default'] if default_io else {}
         dict_property_dict = {}
         return [me,dict_property_dict,default,{}]
+
+class ListProperty(object):
+    def __new__(cls,**arg):
+        list_property_arg = arg
+        me = 'list_property'
+
+        default_io = list_property_arg.has_key('default')
+        default = list_property_arg['default'] if default_io else []
+        
+        list_property_dict = {}
+        return [me,list_property_dict,default,{}]
 
 class EmailProperty(object):
     def __new__(cls,**arg):
